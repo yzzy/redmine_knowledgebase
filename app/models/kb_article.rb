@@ -1,5 +1,4 @@
-class KbArticle < ActiveRecord::Base
-  unloadable
+class KbArticle < RedmineKnowledgebase::BaseRecord
   include Redmine::SafeAttributes
 
   self.locking_column = 'version'
@@ -145,15 +144,5 @@ class KbArticle < ActiveRecord::Base
       KbArticle.version == self.version
     end
 
-  end
-end
-
-class KbDiff < Redmine::Helpers::Diff
-  attr_reader :content_to, :content_from
-
-  def initialize(content_to, content_from)
-    @content_to = content_to
-    @content_from = content_from
-    super(content_to.content, content_from.content)
   end
 end

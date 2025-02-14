@@ -1,5 +1,4 @@
-class KbCategory < ActiveRecord::Base
-  unloadable
+class KbCategory < RedmineKnowledgebase::BaseRecord
   include Redmine::SafeAttributes
 
   self.table_name = "kb_categories"

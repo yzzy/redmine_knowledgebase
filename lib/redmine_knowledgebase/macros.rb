@@ -1,5 +1,3 @@
-#require 'helpers/knowledgebase_link_helper'
-#include KnowledgebaseLinkHelper
 include RedmineKnowledgebase::Helpers::KnowledgebaseLinkHelper
 
 module RedmineKnowledgebase

@@ -23,4 +23,4 @@ end
 
 Project.send :include, RedmineKnowledgebase::Concerns::KnowledgebaseProjectExtension
 SettingsHelper.send :include, RedmineKnowledgebase::Helpers::KnowledgebaseSettingsHelper
-ApplicationHelper.send :include, RedmineCrm::TagsHelper
+ApplicationHelper.send :include, Redmineup::TagsHelper

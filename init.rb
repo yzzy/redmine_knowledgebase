@@ -5,7 +5,6 @@ end
 RedmineKnowledgebase::BaseRecord = defined?(ApplicationRecord) ? ApplicationRecord : ActiveRecord::Base
 RedmineKnowledgebase::BaseRecord.send :include, RedmineKnowledgebase::Acts::Rated
 RedmineKnowledgebase::BaseRecord.send :include, RedmineKnowledgebase::Acts::Versioned
-RedmineKnowledgebase::BaseRecord.send :include, RedmineKnowledgebase::Acts::Viewed
 
 Redmine::Plugin.register :redmine_knowledgebase do
   name        'Knowledgebase'
@@ -13,7 +12,7 @@ Redmine::Plugin.register :redmine_knowledgebase do
   author_url  "http://www.alexbevi.com"
   description 'A plugin for Redmine that adds knowledgebase functionality'
   url         'https://github.com/alexbevi/redmine_knowledgebase'
-  version     '6.0.0'
+  version     '6.0.1'
 
   requires_redmine :version_or_higher => '4.0.0'
 

@@ -12,9 +12,9 @@ class KbArticle < RedmineKnowledgebase::BaseRecord
   belongs_to :author,   :class_name => 'User', :foreign_key => 'author_id'
   belongs_to :updater,  :class_name => 'User', :foreign_key => 'updater_id'
 
-  rcrm_acts_as_viewed
+  up_acts_as_viewed
   acts_as_rated :no_rater => true
-  rcrm_acts_as_taggable
+  up_acts_as_taggable
   acts_as_attachable
   acts_as_watchable
 
